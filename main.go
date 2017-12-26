@@ -24,7 +24,7 @@ func main() {
 		v1.GET("/test", getAllData)
 	}
 
-	router.Run(":3000")
+	router.Run(":10028")
 
 }
 

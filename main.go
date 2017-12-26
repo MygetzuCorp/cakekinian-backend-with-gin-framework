@@ -9,10 +9,14 @@ import (
 
 var db *gorm.DB
 
+func init() {
+	gin.SetMode(gin.ReleaseMode)
+}
+
 func main() {
 	router := gin.Default()
 	router.GET("/", func(c *gin.Context) {
-		c.JSON(http.StatusOK, gin.H{"message": "test bro"})
+		c.JSON(http.StatusOK, gin.H{"message": "Welcome to Cakekinian apps."})
 	})
 
 	v1 := router.Group("services/v1/users")
